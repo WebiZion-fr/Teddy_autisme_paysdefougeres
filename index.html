@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autisme Pays de Fougères — Association de familles</title>
+<meta name="description" content="Autisme Pays de Fougères (ex TED DIT) : écoute, orientation, activités adaptées et défense des droits des personnes autistes et de leurs familles.">
+<style>
+/* Autisme Pays de Fougères — charte apaisante, accessibilité cognitive et sensorielle */
+:root {
+  --fond: #faf8f3;
+  --fond-alt: #eef3f1;
+  --bleu: #5b87a8;
+  --bleu-fonce: #2f5470;
+  --vert: #7fa38e;
+  --vert-clair: #dce8e0;
+  --texte: #243038;
+  --bord: #cfd9d6;
+  --rayon: 14px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: auto; } /* pas d'animation de défilement */
+body {
+  margin: 0;
+  font-family: "Atkinson Hyperlegible", "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--texte);
+  background: var(--fond);
+}
+.skip {
+  position: absolute; left: -999px; top: 0;
+  background: var(--bleu-fonce); color: #fff; padding: .75rem 1rem;
+}
+.skip:focus { left: 0; z-index: 10; }
+a { color: var(--bleu-fonce); text-underline-offset: 3px; }
+a:hover { color: #1d3a4f; }
+:focus-visible { outline: 3px solid var(--bleu-fonce); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+
+header.site { background: #fff; border-bottom: 1px solid var(--bord); }
+header.site .wrap {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: .75rem 2rem; padding-top: 1rem; padding-bottom: 1rem;
+}
+.marque { font-weight: 700; font-size: 1.25rem; color: var(--bleu-fonce); text-decoration: none; }
+.marque small { display: block; font-weight: 400; font-size: .85rem; color: #55656d; }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; }
+nav a {
+  display: inline-block; padding: .55rem .9rem; border-radius: 999px;
+  text-decoration: none; color: var(--texte); border: 2px solid transparent;
+}
+nav a:hover { background: var(--vert-clair); }
+nav a[aria-current="page"] { border-color: var(--bleu); }
+
+.hero { background: var(--fond-alt); padding: 3.5rem 0; }
+.hero h1 { font-size: 2.2rem; line-height: 1.25; margin: 0 0 1rem; color: var(--bleu-fonce); }
+.hero p { max-width: 40rem; margin: 0 0 1.5rem; }
+.btn {
+  display: inline-block; padding: .85rem 1.4rem; border-radius: var(--rayon);
+  background: var(--bleu-fonce); color: #fff; text-decoration: none; font-weight: 700;
+  margin: 0 .5rem .5rem 0; border: 2px solid var(--bleu-fonce);
+}
+.btn:hover { background: #1d3a4f; color: #fff; }
+.btn.sec { background: transparent; color: var(--bleu-fonce); }
+.btn.sec:hover { background: var(--vert-clair); color: var(--bleu-fonce); }
+
+section { padding: 3rem 0; }
+section.alt { background: var(--fond-alt); }
+h2 { font-size: 1.7rem; color: var(--bleu-fonce); margin: 0 0 1.25rem; }
+h3 { font-size: 1.2rem; margin: 0 0 .4rem; }
+.grille { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.carte {
+  background: #fff; border: 1px solid var(--bord); border-radius: var(--rayon); padding: 1.25rem 1.4rem;
+}
+.carte .pic { font-size: 2rem; line-height: 1; display: block; margin-bottom: .5rem; }
+.carte p { margin: 0; }
+.prix { font-size: 2rem; font-weight: 700; color: var(--bleu-fonce); margin: 0; }
+.encart { background: var(--vert-clair); border-radius: var(--rayon); padding: 1rem 1.25rem; }
+ul.simple { padding-left: 1.25rem; }
+dl.contact dt { font-weight: 700; margin-top: .75rem; }
+dl.contact dd { margin: 0; }
+
+footer.site { background: var(--bleu-fonce); color: #eef3f1; padding: 2rem 0; font-size: 1rem; }
+footer.site a { color: #fff; }
+footer.site p { margin: .25rem 0; }
+
+@media (max-width: 40rem) {
+  .hero h1 { font-size: 1.8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="marque" href="#accueil">Autisme Pays de Fougères<small>anciennement TED DIT</small></a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#qui">Qui sommes-nous</a></li>
+        <li><a href="#actions">Nos actions</a></li>
+        <li><a href="#adherer">Adhérer</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+  <div class="hero" id="accueil">
+    <div class="wrap">
+      <h1>Ensemble pour les personnes autistes et leurs familles du Pays de Fougères</h1>
+      <p>Autisme Pays de Fougères est une association de familles. Nous écoutons, conseillons et orientons les familles concernées par les Troubles du Spectre de l'Autisme (TSA), et nous proposons des activités adaptées.</p>
+      <a class="btn" href="#adherer">Adhérer à l'association</a>
+      <a class="btn sec" href="#contact">Nous contacter</a>
+    </div>
+  </div>
+
+  <section id="qui">
+    <div class="wrap">
+      <h2>Qui sommes-nous ?</h2>
+      <p>Association loi 1901 créée en 2011, nous agissons sur le Pays de Fougères (Ille-et-Vilaine, Bretagne). Nos trois missions :</p>
+      <div class="grille">
+        <article class="carte">
+          <span class="pic" aria-hidden="true">👂</span>
+          <h3>Accueil et orientation</h3>
+          <p>Écouter, conseiller et orienter les familles du Pays de Fougères concernées par les TSA.</p>
+        </article>
+        <article class="carte">
+          <span class="pic" aria-hidden="true">🤝</span>
+          <h3>Défense des droits</h3>
+          <p>Faire entendre la voix des familles auprès des pouvoirs publics et des instances locales et nationales : scolarisation, socialisation, insertion professionnelle, création de structures adaptées.</p>
+        </article>
+        <article class="carte">
+          <span class="pic" aria-hidden="true">📄</span>
+          <h3>Aide aux démarches</h3>
+          <p>Informer sur les démarches administratives (MDPH) et proposer un accompagnement juridique.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="actions" class="alt">
+    <div class="wrap">
+      <h2>Nos actions et activités</h2>
+      <div class="grille">
+        <article class="carte">
+          <span class="pic" aria-hidden="true">☕</span>
+          <h3>Café parents</h3>
+          <p>Rencontres et échanges conviviaux entre familles, une fois par mois le samedi après-midi.</p>
+        </article>
+        <article class="carte">
+          <span class="pic" aria-hidden="true">🎬</span>
+          <h3>Cinéma adapté</h3>
+          <p>Une séance par mois, en partenariat avec le cinéma Le Club de Fougères.</p>
+        </article>
+        <article class="carte">
+          <span class="pic" aria-hidden="true">🎹</span>
+          <h3>Musique</h3>
+          <p>Cours de piano au Conservatoire de Fougères (méthode Dolce).</p>
+        </article>
+        <article class="carte">
+          <span class="pic" aria-hidden="true">🏊</span>
+          <h3>Sport et bien-être</h3>
+          <p>Aisance aquatique pendant les vacances scolaires (piscine de Maen Roch), natation adaptée, vélo (partenariat Team Ted Dit Autisme) et équithérapie.</p>
+        </article>
+        <article class="carte">
+          <span class="pic" aria-hidden="true">👨‍👩‍👧</span>
+          <h3>Sorties familiales</h3>
+          <p>Des moments partagés entre familles, dans un cadre bienveillant.</p>
+        </article>
+        <article class="carte">
+          <span class="pic" aria-hidden="true">🧩</span>
+          <h3>Pédagothèque</h3>
+          <p>Prêt de matériel éducatif (type Montessori) aux adhérents, pour tester des outils à la maison.</p>
+        </article>
+        <article class="carte">
+          <span class="pic" aria-hidden="true">🎓</span>
+          <h3>Formations et sensibilisation</h3>
+          <p>Formations pour les aidants et les professionnels selon les recommandations de la Haute Autorité de Santé (ABA, PECS, Epsilon à l'école) et conférences grand public.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="adherer">
+    <div class="wrap">
+      <h2>Adhérer / Nous soutenir</h2>
+      <p class="prix">15 € <span style="font-size:1rem;font-weight:400">par an et par famille</span></p>
+      <p>Les dons et cotisations ouvrent droit à une réduction d'impôt de 66 % (dans la limite de 20 % du revenu imposable).</p>
+      <p class="encart">Adhésion et dons en ligne via HelloAsso :
+        <!-- TODO : remplacer # par l'URL réelle de la campagne HelloAsso 2026 (ou intégrer le widget fourni par HelloAsso) -->
+        <a href="#" id="lien-helloasso">campagne d'adhésion 2026</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <h2>Nous contacter</h2>
+      <dl class="contact">
+        <dt>Téléphone</dt>
+        <dd><a href="tel:+33682656354">06 82 65 63 54</a></dd>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:teddit.fougeres@gmail.com">teddit.fougeres@gmail.com</a></dd>
+        <dt>Adresse</dt>
+        <dd>Les Ateliers, 9 rue des Frères Devéria, 35300 Fougères</dd>
+        <dt>Réseaux sociaux</dt>
+        <dd><!-- TODO : URL de la page Facebook officielle --><a href="#" id="lien-facebook">Page Facebook Autisme Pays de Fougères</a></dd>
+      </dl>
+
+      <h3 style="margin-top:2rem">Ressources utiles</h3>
+      <ul class="simple">
+        <li>CRA Bretagne (Centre Ressources Autisme)</li>
+        <li>Autisme Info Service</li>
+        <li>MDPH 35</li>
+        <li>UEMA de Fougères</li>
+      </ul>
+      <!-- TODO : ajouter les liens officiels vers ces quatre ressources -->
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Autisme Pays de Fougères</strong> (ancien nom : TED DIT – Autisme Pays de Fougères)</p>
+    <p>Association loi 1901 · RNA W351001341 · SIREN 811 693 332</p>
+    <p>Les Ateliers, 9 rue des Frères Devéria, 35300 Fougères</p>
+    <p><a href="mentions-legales.html">Mentions légales</a></p>
+  </div>
+</footer>
+</body>
+</html>
