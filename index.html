@@ -5,92 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Autisme Pays de Fougères — Association de familles</title>
 <meta name="description" content="Autisme Pays de Fougères (ex TED DIT) : écoute, orientation, activités adaptées et défense des droits des personnes autistes et de leurs familles.">
+<link rel="icon" href="logo.png">
 <style>
-/* Autisme Pays de Fougères — charte apaisante, accessibilité cognitive et sensorielle */
+/* Autisme Pays de Fougères — palette tirée du logo (marine + turquoise), sobre et sans animation */
 :root {
-  --fond: #faf8f3;
-  --fond-alt: #eef3f1;
-  --bleu: #5b87a8;
-  --bleu-fonce: #2f5470;
-  --vert: #7fa38e;
-  --vert-clair: #dce8e0;
-  --texte: #243038;
-  --bord: #cfd9d6;
-  --rayon: 14px;
+  --marine: #0b3b5c;
+  --marine-2: #14506f;
+  --turquoise: #2fb7ae;
+  --turquoise-clair: #d9f1ef;
+  --menthe: #eef8f6;
+  --fond: #fbfaf6;
+  --texte: #1f2f3a;
+  --texte-doux: #4a5c68;
+  --bord: #d5e4e3;
+  --rayon: 18px;
+  --ombre: 0 2px 0 rgba(11,59,92,.04), 0 8px 24px rgba(11,59,92,.06);
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: auto; } /* pas d'animation de défilement */
+html { scroll-behavior: auto; scroll-padding-top: 5.5rem; }
 body {
   margin: 0;
   font-family: "Atkinson Hyperlegible", "Open Sans", Arial, Helvetica, sans-serif;
-  font-size: 1.125rem;
-  line-height: 1.7;
-  color: var(--texte);
-  background: var(--fond);
+  font-size: 1.125rem; line-height: 1.7;
+  color: var(--texte); background: var(--fond);
 }
-.skip {
-  position: absolute; left: -999px; top: 0;
-  background: var(--bleu-fonce); color: #fff; padding: .75rem 1rem;
-}
-.skip:focus { left: 0; z-index: 10; }
-a { color: var(--bleu-fonce); text-underline-offset: 3px; }
-a:hover { color: #1d3a4f; }
-:focus-visible { outline: 3px solid var(--bleu-fonce); outline-offset: 3px; border-radius: 4px; }
-.wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+img { max-width: 100%; height: auto; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--marine); color: #fff; padding: .75rem 1rem; }
+.skip:focus { left: 0; z-index: 20; }
+a { color: var(--marine-2); text-underline-offset: 3px; }
+a:hover { color: var(--marine); }
+:focus-visible { outline: 3px solid var(--marine); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 66rem; margin: 0 auto; padding: 0 1.25rem; }
 
-header.site { background: #fff; border-bottom: 1px solid var(--bord); }
-header.site .wrap {
-  display: flex; flex-wrap: wrap; align-items: center;
-  justify-content: space-between; gap: .75rem 2rem; padding-top: 1rem; padding-bottom: 1rem;
-}
-.marque { font-weight: 700; font-size: 1.25rem; color: var(--bleu-fonce); text-decoration: none; }
-.marque small { display: block; font-weight: 400; font-size: .85rem; color: #55656d; }
-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; }
-nav a {
-  display: inline-block; padding: .55rem .9rem; border-radius: 999px;
-  text-decoration: none; color: var(--texte); border: 2px solid transparent;
-}
-nav a:hover { background: var(--vert-clair); }
-nav a[aria-current="page"] { border-color: var(--bleu); }
+/* En-tête */
+header.site { background: rgba(255,255,255,.96); border-bottom: 1px solid var(--bord); position: sticky; top: 0; z-index: 10; }
+header.site .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 2rem; padding-top: .6rem; padding-bottom: .6rem; }
+.marque { display: flex; align-items: center; gap: .8rem; text-decoration: none; color: var(--marine); font-weight: 700; line-height: 1.2; }
+.marque img { width: 3.6rem; height: 3.6rem; object-fit: contain; }
+.marque small { display: block; font-weight: 400; font-size: .85rem; color: var(--texte-doux); }
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem; margin: 0; padding: 0; }
+nav a { display: inline-block; padding: .5rem .95rem; border-radius: 999px; text-decoration: none; color: var(--texte); font-weight: 600; border: 2px solid transparent; }
+nav a:hover { background: var(--turquoise-clair); }
+nav a.cta { background: var(--marine); color: #fff; }
+nav a.cta:hover { background: var(--marine-2); }
 
-.hero { background: var(--fond-alt); padding: 3.5rem 0; }
-.hero h1 { font-size: 2.2rem; line-height: 1.25; margin: 0 0 1rem; color: var(--bleu-fonce); }
-.hero p { max-width: 40rem; margin: 0 0 1.5rem; }
-.btn {
-  display: inline-block; padding: .85rem 1.4rem; border-radius: var(--rayon);
-  background: var(--bleu-fonce); color: #fff; text-decoration: none; font-weight: 700;
-  margin: 0 .5rem .5rem 0; border: 2px solid var(--bleu-fonce);
-}
-.btn:hover { background: #1d3a4f; color: #fff; }
-.btn.sec { background: transparent; color: var(--bleu-fonce); }
-.btn.sec:hover { background: var(--vert-clair); color: var(--bleu-fonce); }
+/* Bandeau d'accueil */
+.hero { background: linear-gradient(180deg, var(--menthe) 0%, var(--fond) 100%); padding: 3.5rem 0 4rem; }
+.hero .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2.5rem; align-items: center; }
+.etiquette { display: inline-block; background: var(--turquoise-clair); color: var(--marine); font-weight: 700; font-size: .95rem; padding: .3rem .9rem; border-radius: 999px; margin-bottom: 1rem; }
+.hero h1 { font-size: 2.4rem; line-height: 1.2; margin: 0 0 1rem; color: var(--marine); }
+.hero p { margin: 0 0 1.5rem; max-width: 36rem; color: var(--texte-doux); font-size: 1.2rem; }
+.hero .logo { display: flex; justify-content: center; }
+.hero .logo img { width: min(100%, 20rem); mix-blend-mode: multiply; }
+.btn { display: inline-block; padding: .9rem 1.5rem; border-radius: 999px; background: var(--marine); color: #fff; text-decoration: none; font-weight: 700; margin: 0 .5rem .6rem 0; border: 2px solid var(--marine); }
+.btn:hover { background: var(--marine-2); border-color: var(--marine-2); color: #fff; }
+.btn.sec { background: transparent; color: var(--marine); }
+.btn.sec:hover { background: var(--turquoise-clair); color: var(--marine); }
 
-section { padding: 3rem 0; }
-section.alt { background: var(--fond-alt); }
-h2 { font-size: 1.7rem; color: var(--bleu-fonce); margin: 0 0 1.25rem; }
-h3 { font-size: 1.2rem; margin: 0 0 .4rem; }
-.grille { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
-.carte {
-  background: #fff; border: 1px solid var(--bord); border-radius: var(--rayon); padding: 1.25rem 1.4rem;
-}
-.carte .pic { font-size: 2rem; line-height: 1; display: block; margin-bottom: .5rem; }
-.carte p { margin: 0; }
-.prix { font-size: 2rem; font-weight: 700; color: var(--bleu-fonce); margin: 0; }
-.encart { background: var(--vert-clair); border-radius: var(--rayon); padding: 1rem 1.25rem; }
-ul.simple { padding-left: 1.25rem; }
-dl.contact dt { font-weight: 700; margin-top: .75rem; }
-dl.contact dd { margin: 0; }
+/* Chiffres clés */
+.reperes { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem; margin-top: -2rem; position: relative; }
+.repere { background: #fff; border: 1px solid var(--bord); border-radius: var(--rayon); padding: 1rem 1.25rem; box-shadow: var(--ombre); text-align: center; }
+.repere strong { display: block; font-size: 1.6rem; color: var(--marine); line-height: 1.2; }
+.repere span { color: var(--texte-doux); font-size: .95rem; }
 
-footer.site { background: var(--bleu-fonce); color: #eef3f1; padding: 2rem 0; font-size: 1rem; }
+/* Sections */
+section { padding: 4rem 0; }
+section.alt { background: var(--menthe); }
+.titre { margin-bottom: 2rem; }
+.titre h2 { font-size: 1.9rem; color: var(--marine); margin: 0 0 .4rem; line-height: 1.25; }
+.titre h2::after { content: ""; display: block; width: 3.5rem; height: 5px; border-radius: 3px; background: var(--turquoise); margin-top: .6rem; }
+.titre p { margin: 0; color: var(--texte-doux); max-width: 40rem; }
+h3 { font-size: 1.2rem; margin: 0 0 .4rem; color: var(--marine); }
+.grille { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.carte { background: #fff; border: 1px solid var(--bord); border-radius: var(--rayon); padding: 1.5rem; box-shadow: var(--ombre); }
+.carte p { margin: 0; color: var(--texte-doux); }
+.pic { display: inline-flex; align-items: center; justify-content: center; width: 3.2rem; height: 3.2rem; border-radius: 50%; background: var(--turquoise-clair); font-size: 1.6rem; line-height: 1; margin-bottom: .8rem; }
+
+/* Adhésion */
+.adhesion { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: stretch; }
+.adhesion .prixcarte { background: var(--marine); color: #fff; border-radius: var(--rayon); padding: 2rem; }
+.adhesion .prixcarte p { margin: 0; }
+.prix { font-size: 3rem; font-weight: 700; line-height: 1.1; }
+.prix small { font-size: 1.1rem; font-weight: 400; }
+.adhesion .prixcarte .btn { background: #fff; color: var(--marine); border-color: #fff; margin-top: 1.25rem; }
+.adhesion .prixcarte .btn:hover { background: var(--turquoise-clair); }
+.avantage { background: #fff; border: 1px solid var(--bord); border-radius: var(--rayon); padding: 2rem; box-shadow: var(--ombre); }
+.avantage p { margin: 0 0 .75rem; }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+dl { margin: 0; }
+dt { font-weight: 700; color: var(--marine); margin-top: 1rem; }
+dt:first-child { margin-top: 0; }
+dd { margin: 0; }
+ul.simple { margin: 0; padding-left: 1.25rem; }
+
+/* Pied de page */
+footer.site { background: var(--marine); color: #e6f2f1; padding: 2.5rem 0; font-size: 1rem; }
 footer.site a { color: #fff; }
-footer.site p { margin: .25rem 0; }
+footer.site p { margin: .3rem 0; }
+footer.site .wrap { display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; align-items: center; }
+footer.site img { width: 5rem; background: #fff; border-radius: 50%; padding: .3rem; }
 
-@media (max-width: 40rem) {
-  .hero h1 { font-size: 1.8rem; }
+/* Pages de texte */
+.texte { max-width: 46rem; }
+.texte h1 { color: var(--marine); font-size: 2.2rem; line-height: 1.2; margin: 0 0 1.5rem; }
+.texte h2 { color: var(--marine); font-size: 1.4rem; margin: 2rem 0 .5rem; }
+
+@media (max-width: 52rem) {
+  .hero .wrap, .adhesion, .contact { grid-template-columns: 1fr; }
+  .hero .logo { order: -1; }
+  .hero .logo img { width: 12rem; }
+  .hero h1 { font-size: 1.9rem; }
+  section { padding: 3rem 0; }
 }
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
-}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
 </head>
 <body>
@@ -98,14 +127,13 @@ footer.site p { margin: .25rem 0; }
 
 <header class="site">
   <div class="wrap">
-    <a class="marque" href="#accueil">Autisme Pays de Fougères<small>anciennement TED DIT</small></a>
+    <a class="marque" href="#accueil"><img src="logo.png" alt=""><span>Autisme Pays de Fougères<small>anciennement TED DIT</small></span></a>
     <nav aria-label="Navigation principale">
       <ul>
-        <li><a href="#accueil">Accueil</a></li>
         <li><a href="#qui">Qui sommes-nous</a></li>
         <li><a href="#actions">Nos actions</a></li>
-        <li><a href="#adherer">Adhérer</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a class="cta" href="#adherer">Adhérer</a></li>
       </ul>
     </nav>
   </div>
@@ -114,17 +142,31 @@ footer.site p { margin: .25rem 0; }
 <main id="contenu">
   <div class="hero" id="accueil">
     <div class="wrap">
-      <h1>Ensemble pour les personnes autistes et leurs familles du Pays de Fougères</h1>
-      <p>Autisme Pays de Fougères est une association de familles. Nous écoutons, conseillons et orientons les familles concernées par les Troubles du Spectre de l'Autisme (TSA), et nous proposons des activités adaptées.</p>
-      <a class="btn" href="#adherer">Adhérer à l'association</a>
-      <a class="btn sec" href="#contact">Nous contacter</a>
+      <div>
+        <span class="etiquette">Association de familles depuis 2011</span>
+        <h1>Ensemble pour les personnes autistes et leurs familles du Pays de Fougères</h1>
+        <p>Nous écoutons, conseillons et orientons les familles concernées par les Troubles du Spectre de l'Autisme (TSA), et nous proposons des activités adaptées tout au long de l'année.</p>
+        <a class="btn" href="#adherer">Adhérer à l'association</a>
+        <a class="btn sec" href="#contact">Nous contacter</a>
+      </div>
+      <div class="logo"><img src="logo.png" alt="Logo Autisme Pays de Fougères"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="reperes">
+      <div class="repere"><strong>2011</strong><span>année de création</span></div>
+      <div class="repere"><strong>1 fois / mois</strong><span>café parents</span></div>
+      <div class="repere"><strong>15 €</strong><span>par an et par famille</span></div>
     </div>
   </div>
 
   <section id="qui">
     <div class="wrap">
-      <h2>Qui sommes-nous ?</h2>
-      <p>Association loi 1901 créée en 2011, nous agissons sur le Pays de Fougères (Ille-et-Vilaine, Bretagne). Nos trois missions :</p>
+      <div class="titre">
+        <h2>Qui sommes-nous ?</h2>
+        <p>Association loi 1901, nous agissons sur le Pays de Fougères (Ille-et-Vilaine, Bretagne). Trois missions guident notre action.</p>
+      </div>
       <div class="grille">
         <article class="carte">
           <span class="pic" aria-hidden="true">👂</span>
@@ -147,7 +189,10 @@ footer.site p { margin: .25rem 0; }
 
   <section id="actions" class="alt">
     <div class="wrap">
-      <h2>Nos actions et activités</h2>
+      <div class="titre">
+        <h2>Nos actions et activités</h2>
+        <p>Des rencontres, des loisirs adaptés et des outils pour les familles et les professionnels.</p>
+      </div>
       <div class="grille">
         <article class="carte">
           <span class="pic" aria-hidden="true">☕</span>
@@ -190,48 +235,68 @@ footer.site p { margin: .25rem 0; }
 
   <section id="adherer">
     <div class="wrap">
-      <h2>Adhérer / Nous soutenir</h2>
-      <p class="prix">15 € <span style="font-size:1rem;font-weight:400">par an et par famille</span></p>
-      <p>Les dons et cotisations ouvrent droit à une réduction d'impôt de 66 % (dans la limite de 20 % du revenu imposable).</p>
-      <p class="encart">Adhésion et dons en ligne via HelloAsso :
-        <!-- TODO : remplacer # par l'URL réelle de la campagne HelloAsso 2026 (ou intégrer le widget fourni par HelloAsso) -->
-        <a href="#" id="lien-helloasso">campagne d'adhésion 2026</a>.
-      </p>
+      <div class="titre">
+        <h2>Adhérer / Nous soutenir</h2>
+        <p>Rejoindre l'association, c'est accéder aux activités, à la pédagothèque et à un réseau de familles.</p>
+      </div>
+      <div class="adhesion">
+        <div class="prixcarte">
+          <p class="prix">15 € <small>par an et par famille</small></p>
+          <!-- TODO : remplacer # par l'URL réelle de la campagne HelloAsso 2026 (ou intégrer le widget fourni par HelloAsso) -->
+          <a class="btn" id="lien-helloasso" href="#">Adhérer sur HelloAsso</a>
+        </div>
+        <div class="avantage">
+          <h3>Un don déductible des impôts</h3>
+          <p>Les dons et cotisations ouvrent droit à une réduction d'impôt de 66 % (dans la limite de 20 % du revenu imposable).</p>
+          <p>Adhésion et dons en ligne via la plateforme HelloAsso, campagne d'adhésion 2026.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="contact" class="alt">
     <div class="wrap">
-      <h2>Nous contacter</h2>
-      <dl class="contact">
-        <dt>Téléphone</dt>
-        <dd><a href="tel:+33682656354">06 82 65 63 54</a></dd>
-        <dt>E-mail</dt>
-        <dd><a href="mailto:teddit.fougeres@gmail.com">teddit.fougeres@gmail.com</a></dd>
-        <dt>Adresse</dt>
-        <dd>Les Ateliers, 9 rue des Frères Devéria, 35300 Fougères</dd>
-        <dt>Réseaux sociaux</dt>
-        <dd><!-- TODO : URL de la page Facebook officielle --><a href="#" id="lien-facebook">Page Facebook Autisme Pays de Fougères</a></dd>
-      </dl>
-
-      <h3 style="margin-top:2rem">Ressources utiles</h3>
-      <ul class="simple">
-        <li>CRA Bretagne (Centre Ressources Autisme)</li>
-        <li>Autisme Info Service</li>
-        <li>MDPH 35</li>
-        <li>UEMA de Fougères</li>
-      </ul>
-      <!-- TODO : ajouter les liens officiels vers ces quatre ressources -->
+      <div class="titre">
+        <h2>Nous contacter</h2>
+        <p>N'hésitez pas à nous écrire ou à nous appeler, nous vous répondrons avec plaisir.</p>
+      </div>
+      <div class="contact">
+        <div class="carte">
+          <dl>
+            <dt>Téléphone</dt>
+            <dd><a href="tel:+33682656354">06 82 65 63 54</a></dd>
+            <dt>E-mail</dt>
+            <dd><a href="mailto:teddit.fougeres@gmail.com">teddit.fougeres@gmail.com</a></dd>
+            <dt>Adresse</dt>
+            <dd>Les Ateliers, 9 rue des Frères Devéria, 35300 Fougères</dd>
+            <dt>Réseaux sociaux</dt>
+            <dd><!-- TODO : URL de la page Facebook officielle --><a href="#" id="lien-facebook">Page Facebook Autisme Pays de Fougères</a></dd>
+          </dl>
+        </div>
+        <div class="carte">
+          <h3>Ressources utiles</h3>
+          <ul class="simple">
+            <li>CRA Bretagne (Centre Ressources Autisme)</li>
+            <li>Autisme Info Service</li>
+            <li>MDPH 35</li>
+            <li>UEMA de Fougères</li>
+          </ul>
+          <!-- TODO : ajouter les liens officiels vers ces quatre ressources -->
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="site">
   <div class="wrap">
-    <p><strong>Autisme Pays de Fougères</strong> (ancien nom : TED DIT – Autisme Pays de Fougères)</p>
-    <p>Association loi 1901 · RNA W351001341 · SIREN 811 693 332</p>
-    <p>Les Ateliers, 9 rue des Frères Devéria, 35300 Fougères</p>
-    <p><a href="mentions-legales.html">Mentions légales</a></p>
+    <img src="logo.png" alt="">
+    <div>
+      <p><strong>Autisme Pays de Fougères</strong> (ancien nom : TED DIT – Autisme Pays de Fougères)</p>
+      <p>Association loi 1901 · RNA W351001341 · SIREN 811 693 332</p>
+      <p>Les Ateliers, 9 rue des Frères Devéria, 35300 Fougères</p>
+      <p><a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
   </div>
 </footer>
 </body>
